@@ -1,0 +1,94 @@
+.bookingFrame {
+    margin: 20px !important
+}
+
+.cardTitle {
+    font-family: Balsamiq;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.cardName {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.cardNameValue {
+    font-family: Balsamiq;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 350;
+}
+
+.cardNew{
+    width: 250px;
+}
+
+.editBtn{
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: Balsamiq;
+}
+
+.rightFrame{
+    margin: 10px !important;
+}
+
+.paymentMethodCard{
+    margin: 15px;
+}
+
+.paymentCard{
+    border-radius: 10px;
+    max-height: 120px!important;
+}
+
+.payCardBody{
+    display: flex;
+    flex-direction: row;
+}
+
+.iconBox{
+    height: 40px;
+    width: 55px;
+    border-radius: 5px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.paymentCard:hover{
+    background-color: cornflowerblue !important;
+    cursor: pointer;
+}
+
+.activeClass {
+    background-color: cornflowerblue !important; 
+    max-height: 120px;
+}
+
+.cardItemCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardItemTopSpace {
+    margin-top: 30px;
+}
+.bookingBtn{
+    width: 150px;
+}
+.editBtn:hover{
+    cursor: pointer;
+}

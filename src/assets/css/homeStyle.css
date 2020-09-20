@@ -1,0 +1,21 @@
+.goreservationbutton{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.imageOfScreen {
+    height: 95%;
+    width: 95%;
+    background-size: cover;
+}
+
+.textContainer{
+    text-align: center;
+}
+
+.custom:hover{
+    cursor: pointer;
+}
