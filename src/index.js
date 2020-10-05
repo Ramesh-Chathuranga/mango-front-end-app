@@ -30,8 +30,8 @@ ReactDOM.render(
         <PrivateRouter path="/reseravtion" exact RoutComponent={DashBoard} />
         <Route exact path="/signup" render={(props) => <SignUp {...props} />} />
         <Route exact path="/login" render={(props) => <Login {...props} />} />
-        <Route exact path="/card" render={(props) => <CardView {...props} />} />
-        <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route exact path="/" render={(props) => <CardView {...props} />} />
+        <Route exact path="/home" render={(props) => <Home {...props} />} />
       </Switch>
     </Router>
   </Provider>,
