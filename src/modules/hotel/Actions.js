@@ -1,26 +1,35 @@
-import {createAction} from '../../internal/core/AppUtils';
-import React from 'react';
+import { createAction } from "../../internal/core/AppUtils";
+import React from "react";
 import HotelRepository from "../../internal/repository/HotelRepository";
 import RoomRepository from "../../internal/repository/RoomRepository";
-import _ from 'lodash';
+import CardRepository from "../../internal/repository/CardRepository";
+import _ from "lodash";
 
 export const ModuleEvents = {
   COMMEN_NAVIGATION: "COMMEN_NAVIGATION",
   KEEP_RESERVATION_DATA: "KEEP_RESERVATION_DATA",
-  GET_HOTEL_LIST:"GET_HOTEL_LIST",
+  GET_HOTEL_LIST: "GET_HOTEL_LIST",
   GET_ROOM_LIST: "GET_ROOM_LIST",
-  GET_PENDING_RESERVATION:"GET_PENDING_RESERVATION",
+  GET_PENDING_RESERVATION: "GET_PENDING_RESERVATION",
+  GET_ALL_CARD_DATA: "GET_ALL_CARD_DATA",
 };
 
 export default {
-  commonNavigation: createAction(ModuleEvents.COMMEN_NAVIGATION, value => value),
-  keepReservationData: createAction(ModuleEvents.KEEP_RESERVATION_DATA, value => value),
-  getHotelList: createAction(ModuleEvents.GET_HOTEL_LIST, async() => {
+  commonNavigation: createAction(
+    ModuleEvents.COMMEN_NAVIGATION,
+    (value) => value
+  ),
+  keepReservationData: createAction(
+    ModuleEvents.KEEP_RESERVATION_DATA,
+    (value) => value
+  ),
+  getHotelList: createAction(ModuleEvents.GET_HOTEL_LIST, async () => {
     return await HotelRepository.getAllHotelList();
   }),
-  getRoomList: createAction(ModuleEvents.GET_ROOM_LIST, async() => {
+  getRoomList: createAction(ModuleEvents.GET_ROOM_LIST, async () => {
     return await RoomRepository.getAllRoomList();
   }),
+  getAllCardData: createAction(ModuleEvents.GET_ALL_CARD_DATA, async () => {
+    return await CardRepository.getAllActorsList();
+  }),
 };
-
-
