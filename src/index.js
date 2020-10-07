@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import { Provider, connect } from "react-redux";
+
 import { Router, Route, Switch, Redirect, NavLink } from "react-router-dom";
 import { store, appHistory } from "./internal/core/StoreCreator";
 import { UserNavBar, PrivateRouter } from "./components/index";
@@ -25,6 +26,7 @@ ReactDOM.render(
       <div>
         <UserNavBar />
       </div>
+
       <Switch>
         <PrivateRouter path="/booking" exact RoutComponent={Booking} />
         <PrivateRouter path="/reseravtion" exact RoutComponent={DashBoard} />

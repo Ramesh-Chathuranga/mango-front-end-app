@@ -12,6 +12,7 @@ export const ModuleEvents = {
   GET_ROOM_LIST: "GET_ROOM_LIST",
   GET_PENDING_RESERVATION: "GET_PENDING_RESERVATION",
   GET_ALL_CARD_DATA: "GET_ALL_CARD_DATA",
+  GET_CARD_DATA_BY_GENDER: "GET_CARD_DATA_BY_GENDER",
 };
 
 export default {
@@ -32,4 +33,13 @@ export default {
   getAllCardData: createAction(ModuleEvents.GET_ALL_CARD_DATA, async () => {
     return await CardRepository.getAllActorsList();
   }),
+  getCardDataByGender: createAction(
+    ModuleEvents.GET_CARD_DATA_BY_GENDER,
+    async (gender) => {
+      return await CardRepository.getCardByGender({
+        type: "gender",
+        value: gender,
+      });
+    }
+  ),
 };

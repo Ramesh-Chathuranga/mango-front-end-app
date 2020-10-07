@@ -38,6 +38,12 @@ export const Reducer = (state = initialState, action) => {
       }
       return state;
     }
+    case ModuleEvents.GET_CARD_DATA_BY_GENDER: {
+      if (payload) {
+        return state.set("getcardData", payload);
+      }
+      return state;
+    }
 
     default:
       return state;
